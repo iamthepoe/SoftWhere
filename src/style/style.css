@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+  --blackblue: #041621;
+  --darkblue: #06283D;
+  --blue: #1363DF;
+  --lightblue: #47B5FF;
+  --whiteblue: #DFF6FF;
+  --principalfont: 'Proza Libre', sans-serif;
+}
+
+input{
+	text-align: center;
+	margin: 5px 0 5px 0;
+	width: 300px;
+	height: 30px;
+	border: none;
+	background-color: var(--whiteblue);
+	font-family: var(--principalfont);
+	transition: 0.4s;
+}
+
+input:hover{
+	cursor: pointer;
+	background-color:var(--lightblue);
+}
+
+button{
+	border: none;
+}
+
+body{
+	background: var(--blackblue);
+}
+
+.header{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 20vh;
+	font-family: var(--principalfont);
+	color: #fff;
+}
+
+.main{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 80vh;
+}
+
+.section-search{
+	display: flex;
+	flex-direction: column;
+}
+
+.section-data{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40vh;
+	width: 40vw;
+	flex-direction: column;
+	background-color: var(--darkblue);
+	border-radius: 40px;
+}
