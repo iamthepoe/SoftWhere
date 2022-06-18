@@ -15,6 +15,19 @@
   --principalfont: 'Proza Libre', sans-serif;
 }
 
+/*Remove input type number arrows*/
+	/* Chrome, Safari, Edge, Opera */
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	  -webkit-appearance: none;
+	  margin: 0;
+	}
+
+	/* Firefox */
+	input[type=number] {
+	  -moz-appearance: textfield;
+	}
+
 input{
 	text-align: center;
 	margin: 5px 0 5px 0;
@@ -31,10 +44,27 @@ input:hover{
 	background-color:var(--lightblue);
 }
 
+.section-search > input{
+	font-size: 1rem;
+	height: 50px;
+	border-radius: 10px;
+	background-color: var(--whiteblue);
+}
 button{
+	border-radius: 10px;
+	font-size: 1rem;
+	height: 45px;
+	width: 200px;
 	border: none;
+	background-color: var(--lightblue);
+	transition: 0.45s;
+	font-family: var(--principalfont);
 }
 
+button:hover{
+	cursor: pointer;
+	background-color: var(--blue);
+}
 body{
 	background: var(--blackblue);
 }
@@ -60,7 +90,14 @@ body{
 
 .section-search{
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	flex-direction: column;
+	font-family: var(--principalfont);
+	height: 40vh;
+	width: 30vw;
+	background-color: var(--darkblue);
+	border-radius: 40px;
 }
 
 .section-data{
