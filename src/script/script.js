@@ -19,13 +19,17 @@ search.addEventListener('click', ()=>{
     .then((res)=>{
         return res.json();
     }).then((res)=>{
-        data[0].value= res.logradouro;
-        data[1].value = res.bairro;
-        data[2].value = res.localidade;
-        data[3].value = res.uf;
-        data[4].value = res.ddd;
-        data.forEach(ShowNotFoundInputs);
+        if(!res.erro){
+            data[0].value= res.logradouro;
+            data[1].value = res.bairro;
+            data[2].value = res.localidade;
+            data[3].value = res.uf;
+            data[4].value = res.ddd;
+            data.forEach(ShowNotFoundInputs);    
+        }
+        
     }).catch((error)=>{
         alert('O cep inserido é INVÁLIDO');
     });
 });
+
